@@ -24,7 +24,7 @@ const employees = [
         name: "Carla Gonzales",
         role: "Project Manager",
         department: "Operations",
-        startdate: "2020-09-22",
+        startdate: "2004-09-22",
         location: "Espoo",
         salary: 62000,
         status: "Part-time"
@@ -64,7 +64,7 @@ const employees = [
         name: "Grace Park",
         role: "Junior Software Developer",
         department: "Engineering",
-        startdate: "2023-08-30",
+        startdate: "2014-08-30",
         location: "Turku",
         salary: 50000,
         status: "Intern"

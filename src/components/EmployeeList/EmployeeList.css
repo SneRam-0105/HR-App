@@ -1,5 +1,11 @@
-#employee {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+.cards {
+  min-width: 180px;
+  max-width: 350px;
+  background: lightblue;
+  color: black;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  align-items: center;
 }

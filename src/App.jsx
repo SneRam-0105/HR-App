@@ -1,23 +1,45 @@
+import { useState } from 'react';
 import "./App.css";
-import Header from "./components/Header/Header.jsx";
 import EmployeeList from "./components/EmployeeList/EmployeeList.jsx";
-import Footer from "./components/Footer/Footer.jsx";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLoginClick = () => {
+    setIsLoggedIn(true);
+  };
+
+  const handleLogOutClick = () => {
+    setIsLoggedIn(false);
+  };
+
   return (
-    <>
+    <div>
       <div>
-        <Header />
-        <main>
-          <h1>Employee dashboard</h1>
 
-          <EmployeeList />
+        {isLoggedIn ?
+          (<div>
+            <h1>Employee Database</h1>
 
-        </main>
-        <Footer />
+            <button onClick={handleLogOutClick}>Log out</button>
+          </div>
+          ) :
+          (
+            <div> <h2>Please Log In</h2>
+              <button onClick={handleLoginClick}>Log in </button>
+            </div>
+          )
+        }
+
       </div>
-    </>
+      <div id="employee">
+        <EmployeeList props={isLoggedIn} />
+      </div>
+
+    </div>
   );
 }
 
 export default App;
+
+

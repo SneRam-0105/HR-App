@@ -1,19 +1,29 @@
 import EmployeeCard from "../EmployeeCard/EmployeeCard.jsx";
 import './EmployeeList.css'
-const EmployeeList = () => {
-    return (
+import employeeData from "../Array/employeeData.js"
 
-        <div id="employee" >
+const EmployeeList = ({ props }) => {
 
-            <EmployeeCard name="Sneha" initRole="HR" department="Sales" salary="2000" location="California" />
-            <EmployeeCard name="Ruth" initRole="developer" department="ICT" salary="3000" location="Austria" />
-            <EmployeeCard name="Steffi" initRole="tester" department="ICT" salary="4000" location="Finland" />
-            <EmployeeCard name="Shital" initRole="Data Analyst" department="IT" salary="5000" location="Norway" />
+    if (props) {
 
 
+        return employeeData.map((employee) => (
 
-        </div >
-    );
+            <EmployeeCard key={employee.id}
+                {...employee} //... takes all the elements from employeedata array
+            // name={employee.name}
+            // role={employee.role}
+            // department={employee.department}
+            // startdate={employee.startdate}
+            // location={employee.location}
+            // salary={employee.salary}
+            // status={employee.status}
+
+            />
+
+        ))
+
+    }
+    return;
 };
-
 export default EmployeeList;

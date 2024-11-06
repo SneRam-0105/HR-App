@@ -4,3 +4,14 @@
   padding: 2rem;
   text-align: center;
 }
+button {
+  margin-bottom: 5px;
+  background-color: lightcoral;
+  color: white;
+  margin: 10px;
+}
+#employee {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
