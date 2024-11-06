@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import "./EmployeeCard.css";
+
 
 const EmployeeCard = (props) => {
     const [role, setRole] = useState(props.initRole);

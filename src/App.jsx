@@ -10,7 +10,9 @@ function App() {
         <Header />
         <main>
           <h1>Employee dashboard</h1>
+
           <EmployeeList />
+
         </main>
         <Footer />
       </div>
