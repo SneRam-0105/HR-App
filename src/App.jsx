@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import "./App.css";
 import EmployeeList from "./components/EmployeeList/EmployeeList.jsx";
+import Button from './components/Buttons/button.jsx';
+
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -21,19 +23,19 @@ function App() {
           (<div>
             <h1>Employee Database</h1>
 
-            <button onClick={handleLogOutClick}>Log out</button>
+            <Button onClick={handleLogOutClick} text={"Logout"} />
           </div>
           ) :
           (
             <div> <h2>Please Log In</h2>
-              <button onClick={handleLoginClick}>Log in </button>
+              <Button onClick={handleLoginClick} text={"Login"} />
             </div>
           )
         }
 
       </div>
       <div id="employee">
-        <EmployeeList props={isLoggedIn} />
+        {isLoggedIn && <EmployeeList />}
       </div>
 
     </div>
