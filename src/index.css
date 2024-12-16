@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,700&display=swap");
 
 :root {
   font-family: "Hina Mincho", sans-serif;
@@ -14,7 +14,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -25,11 +29,9 @@ a:hover {
 }
 
 body {
-  margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 h1 {
@@ -54,6 +56,13 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+main {
+  min-height: calc(100vh - 225px);
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }
 
 @media (prefers-color-scheme: light) {
