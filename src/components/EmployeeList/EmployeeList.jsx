@@ -1,5 +1,5 @@
 import EmployeeCard from "../EmployeeCard/EmployeeCard.jsx";
-import './EmployeeList.css';
+import styles from "./EmployeeList.module.css"
 import { useEffect, useState } from "react";
 import axios from "axios";
 // import Form from "../../pages/Form.jsx";
@@ -27,22 +27,21 @@ const EmployeeList = () => {
     // };
 
     return (
-        <div>
-            <main>
-                <h2>Employee List</h2>
-                {/* Form for adding new employees */}
-                {/* <Form addEmployeeToList={addEmployeeToList} /> */}
 
-                {/* Display employee cards */}
+        <div className={styles.list}>
 
-                {isLoading ? (
-                    <p>Loading...</p>
-                ) : (
-                    persons.map((employee) => (
-                        <EmployeeCard key={employee.id} {...employee} />
-                    ))
-                )}
-            </main>
+
+
+            {/* Display employee cards */}
+
+            {isLoading ? (
+                <p>Loading...</p>
+            ) : (
+                persons.map((employee) => (
+                    <EmployeeCard key={employee.id} {...employee} />
+                ))
+            )}
+
         </div>
     );
 };

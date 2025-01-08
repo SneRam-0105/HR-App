@@ -2,10 +2,10 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { Outlet } from "react-router-dom";
 
-const Root = () => {
+const Root = ({ isLoggedIn, loginHandler }) => {
     return (
         <>
-            <Header />
+            <Header isLoggedIn={isLoggedIn} loginHandler={loginHandler} />
             <main>
                 <Outlet />
             </main>

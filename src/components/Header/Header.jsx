@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
 import Button from "../Buttons/button";
+import styles from "./Header.module.css";
 
 
 
 
 
-const Header = (props) => {
-    const buttonText = props.loginStatus ? "Log out" : "Log in";
+const Header = ({ isLoggedIn, loginHandler }) => {
+    const buttonText = isLoggedIn ? "Log out" : "Log in";
 
     return (
-        <header >
+        <header className={styles.header}>
 
             <h1>Employee dashboard</h1>
 
@@ -25,7 +26,11 @@ const Header = (props) => {
                         </li>
                     </ul>
                 </nav>
-                {<Button onClick={props.onClick} text={buttonText} />}
+                <Button
+                    onClick={loginHandler}
+                    text={buttonText}
+                    role="primary-light"
+                />
             </div>
         </header>
     );

@@ -1,0 +1,37 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  font-size: 1.3rem;
+}
+
+.formBase {
+  width: 400px;
+}
+
+.formBase input,
+.formBase select {
+  width: 100%;
+  padding: 0.5rem;
+  font-family: inherit;
+  border-radius: 10px;
+  font-size: 1.3rem;
+}
+
+.formBase label {
+  width: 100%;
+  display: inline-block;
+  margin-top: 1rem;
+  color: black;
+  font-size: 1.3rem;
+}
+
+.formButtons {
+  width: 20%;
+  min-width: 100px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.3rem;
+}
