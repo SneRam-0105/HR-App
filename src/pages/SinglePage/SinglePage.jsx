@@ -1,5 +1,3 @@
-import React from "react";
-
 import useEmployeeInfo from "../../Hooks/useEmployeeInfo";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";

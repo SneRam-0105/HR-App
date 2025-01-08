@@ -20,10 +20,7 @@ const EmployeeList = () => {
             });
     }, []);
 
-    // Function to add a new employee to the list
-    // const addEmployeeToList = (newEmployee) => {
-    //     setPersons((prev) => [...prev, newEmployee]); // Adding the new employee to the list from thr form
-    // };
+
 
     return (
 

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { calcYearsWorked } from "../../yearcalculation/year";
 import Button from "../Buttons/Button";
 import styles from "./EmployeeCard.module.css";
-
+import axios from "axios";
 
 const Card = ({ startDate, department, role, name, location, id }) => {
 
@@ -11,6 +11,17 @@ const Card = ({ startDate, department, role, name, location, id }) => {
     // const [toggleFormEdit, setToggleFormEdit] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
 
+    const updateEmployeeDetails = () => {
+        axios
+            .patch(`${import.meta.env.VITE_BACKEND_URL}/persons/${id}`, person)
+            .then((response) => {
+
+            })
+            .catch((error) => {
+                console.error("Error updating data:", error);
+
+            });
+    }
 
     const isAnniversary = yearsWorked > 0 && yearsWorked % 5 === 0;
 
@@ -79,7 +90,11 @@ const Card = ({ startDate, department, role, name, location, id }) => {
                     <div className={styles.cardButton}>
                         <Button
                             className={styles.cardButtons}
-                            onClick={() => setIsEditing((prev) => !prev)}
+                            onClick={() => {
+                                setIsEditing((prev) => !prev);
+                                updateEmployeeDetails();
+                            }}
+
                             text={isEditing ? "Save" : "Edit"}
                             role="secondary"
                         />
