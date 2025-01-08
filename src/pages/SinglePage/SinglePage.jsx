@@ -11,7 +11,7 @@ import { calcYearsWorked } from '../../yearcalculation/year';
 const EmployeeDetailsPage = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-    const { data, loading, error, read } = useEmployeeInfo(`http://localhost:3002/persons/${id}`);
+    const { data, loading, error, read } = useEmployeeInfo(`${import.meta.env.VITE_BACKEND_URL}/persons/${id}`);
 
     useEffect(() => {
         read();

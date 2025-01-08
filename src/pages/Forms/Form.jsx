@@ -31,7 +31,7 @@ const Form = () => {
 
         // Send POST request to backend to add a new employee
         axios
-            .post("http://localhost:3002/persons", formData)
+            .post(`${import.meta.env.VITE_BACKEND_URL}/persons`, formData)
             .then((response) => {
 
                 // Reset form fields

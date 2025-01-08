@@ -7,10 +7,9 @@ import axios from "axios";
 const EmployeeList = () => {
     const [persons, setPersons] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-
     useEffect(() => {
         axios
-            .get("http://localhost:3002/persons")
+            .get(`${import.meta.env.VITE_BACKEND_URL}/persons`)
             .then((response) => {
                 setPersons(response.data);
                 setIsLoading(false);
