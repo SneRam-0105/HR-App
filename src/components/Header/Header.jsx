@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Button from "../Buttons/button";
+import Button from "../Buttons/Button";
 import styles from "./Header.module.css";
 
 

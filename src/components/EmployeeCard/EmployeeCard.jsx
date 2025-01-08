@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { calcYearsWorked } from "../../yearcalculation/year";
-import Button from "../Buttons/button";
+import Button from "../Buttons/Button";
 import styles from "./EmployeeCard.module.css";
 
 

@@ -3,7 +3,7 @@ import React from "react";
 import useEmployeeInfo from "../../Hooks/useEmployeeInfo";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import Button from "../../components/Buttons/button";
+import Button from "../../components/Buttons/Button";
 import { useEffect } from "react";
 import styles from './SinglePage.module.css';
 import { calcYearsWorked } from '../../yearcalculation/year';
