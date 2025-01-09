@@ -5,13 +5,17 @@ import Form from "../pages/Forms/Form";
 // import Login from "../pages/Login";
 import ErrorPage from "../pages/ErrorPage";
 import EmployeeDetailsPage from "../pages/SinglePage/SinglePage";
-
-const createRoutes = () => {
+import Login from "../pages/Login";
+const createRoutes = (isLoggedIn, loginHandler) => {
     return createBrowserRouter(
         [
             {
                 path: "/",
-                element: <Root />,
+                element: isLoggedIn ? (
+                    <Root isLoggedIn={isLoggedIn} loginHandler={loginHandler} />
+                ) : (
+                    <Login loginHandler={loginHandler} />
+                ),
                 errorElement: <ErrorPage />,
                 children: [
                     { path: "/employees", element: <List /> },
