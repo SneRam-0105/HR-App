@@ -3,10 +3,13 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: rgb(171, 43, 226);
 }
+
 .loginform {
   margin: 0 auto;
 }
+
 .loginForm label {
   color: black;
   font-weight: bold;
@@ -17,6 +20,7 @@
 .loginForm input {
   width: 100%;
 }
+
 .loginForm p {
   color: black;
   font-size: larger;
