@@ -1,0 +1,92 @@
+.cards {
+  display: flex;
+  min-width: 350px;
+  width: 28%;
+  position: relative;
+  background: white;
+  color: black;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  align-items: center;
+  font-weight: bold;
+
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.cardButtons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.cardButton {
+  width: 45%;
+  align-self: center;
+  margin: 0px 10px 2px 2px;
+}
+.cardBody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.cardContent {
+  display: flex;
+  flex-direction: row;
+}
+
+.years {
+  align-self: end;
+  margin: inherit;
+}
+
+.date {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.cardImage {
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-self: center;
+}
+.cardHeader {
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  font-size: larger;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 0.5px solid darkgray;
+}
+.cardData {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 1.1rem;
+}
+.celebration {
+  align-items: flex-end;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+}
+.cardIconMessage {
+  font-size: small;
+  border-radius: 5px;
+  margin-top: 5px;
+}

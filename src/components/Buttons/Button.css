@@ -1,22 +1,24 @@
 button {
-  border-radius: 8px;
-  border: 1px solid #005872;
-  box-shadow: none;
-  padding: 0.3rem 1rem;
+  /* padding: 0.2rem 1rem; */
   height: 2rem;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: orange;
   cursor: pointer;
-  color: white;
+  color: black;
   transition: all 0.25s;
+  width: 100%;
+  background-color: #ffc107;
+  box-shadow: none;
+  border: none;
 }
 
 .primary {
-  background-color: red;
+  background-color: rgb(216, 49, 49);
+  color: white;
 }
 
 .secondary {
-  background-color: green;
+  background-color: #28a745;
+  color: white;
 }

@@ -1,0 +1,31 @@
+.loginformContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.loginform {
+  margin: 0 auto;
+}
+.loginForm label {
+  color: black;
+  font-weight: bold;
+  width: 300px;
+  font-size: larger;
+}
+
+.loginForm input {
+  width: 100%;
+}
+.loginForm p {
+  color: black;
+  font-size: larger;
+  text-align: center;
+  font-weight: bold;
+}
+
+.loginForm button {
+  width: 50%;
+
+  margin: 1rem;
+}

@@ -1,29 +1,45 @@
 import EmployeeCard from "../EmployeeCard/EmployeeCard.jsx";
-import './EmployeeList.css'
-import employeeData from "../Array/employeeData.js"
+import styles from "./EmployeeList.module.css"
+import { useEffect, useState } from "react";
+import axios from "axios";
+// import Form from "../../pages/Form.jsx";
 
-const EmployeeList = ({ props }) => {
+const EmployeeList = () => {
+    const [persons, setPersons] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    useEffect(() => {
+        axios
+            .get(`${import.meta.env.VITE_BACKEND_URL}/persons`)
+            .then((response) => {
+                setPersons(response.data);
+                setIsLoading(false);
+            })
+            .catch((error) => {
+                console.error("Error fetching data:", error);
+                setIsLoading(false);
+            });
+    }, []);
 
-    if (props) {
 
 
-        return employeeData.map((employee) => (
+    return (
 
-            <EmployeeCard key={employee.id}
-                {...employee} //... takes all the elements from employeedata array
-            // name={employee.name}
-            // role={employee.role}
-            // department={employee.department}
-            // startdate={employee.startdate}
-            // location={employee.location}
-            // salary={employee.salary}
-            // status={employee.status}
+        <div className={styles.list}>
 
-            />
 
-        ))
 
-    }
-    return;
+            {/* Display employee cards */}
+
+            {isLoading ? (
+                <p>Loading...</p>
+            ) : (
+                persons.map((employee) => (
+                    <EmployeeCard key={employee.id} {...employee} />
+                ))
+            )}
+
+        </div>
+    );
 };
+
 export default EmployeeList;
