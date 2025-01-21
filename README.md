@@ -20,3 +20,5 @@ npm run dev
 ## What was practiced today
 
 I learnt how to use import and export two components and button click event in React. Practiced little bit css on displaying cards.
+
+Learning how to use AWS with this with github - Ruth 
